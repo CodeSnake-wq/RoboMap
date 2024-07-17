@@ -1,0 +1,21 @@
+﻿{{> imports}}
+
+namespace {{models-namespace}}
+{
+{{#if comment}}
+    /// <summary>
+    {{comment}}
+    ///
+</summary>
+{{/if}}
+{{#each class-annotations}}
+{{{class-annotation}}}
+{{/each}}
+    //Declaring public class {{class}}
+    public class {{class}}
+    {
+        //Declaration of all variables for class {{class}}
+        {{{> properties}}}
+        {{{> constructor}}}
+    }
+}

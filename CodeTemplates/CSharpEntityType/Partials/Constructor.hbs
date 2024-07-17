@@ -1,0 +1,12 @@
+﻿{{#if properties}}
+        // Contructor for class {{class}}
+        public {{class}}({{#each properties}}{{property-type}} {{camelCase property-name}}{{#unless @last}}, {{/unless}}{{/each}})
+        {
+            {{#each properties}}
+            this.{{PascalCase property-name}} = {{camelCase property-name}};
+            {{/each}}
+        }
+
+        // Empty Constructor for class {{class}}
+        public {{class}}() {}
+{{/if}}
